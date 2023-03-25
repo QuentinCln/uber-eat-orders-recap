@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "name": "ub-eat",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "packageManager": "yarn@3.5.0",
+  "scripts": {
+    "clean": "rm -rf ./dist tsconfig.tsbuildinfo",
+    "build": "yarn run clean && tsc",
+    "start": "node ./dist/index.js",
+    "w": "nodemon --watch './src/**/*' -e ts --exec ts-node ./src/index.ts"
+  },
+  "volta": {
+    "node": "14.15.1",
+    "yarn": "1.22.19"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.7",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-import": "^0.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  }
+}
