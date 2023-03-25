@@ -1,0 +1,32 @@
+{
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript"
+  ],
+  "env": {
+    "jest": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts"]
+      }
+    }
+  },
+  "rules": {
+    "semi": ["error", "never"],
+    "max-len": ["error", { "code": 150 }],
+    "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+    ],
+    "import/prefer-default-export": "off"
+  }
+}
